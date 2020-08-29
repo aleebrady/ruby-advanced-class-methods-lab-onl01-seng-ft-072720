@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -8,6 +10,11 @@ class Song
  
   def save
     self.class.all << self
+  end
+  
+  def self.create 
+    song = Song.create 
+    @@all << song 
   end
  
 end
